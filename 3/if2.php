@@ -1,6 +1,9 @@
 <?PHP
-$check = "test";
-if ($check === test){
-    echo "checkの文字列は正しいです！";
+$check = "est";
+if ($check == "test"){
+    echo "checkの内容は正しいです！\n";
+}
+else {
+    echo "checkの内容が正しくありません。\n";
 }
 ?>
