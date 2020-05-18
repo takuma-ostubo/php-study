@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateListingsTable extends Migration
+class CreateCardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateListingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('listings', function (Blueprint $table) {
+        Schema::create('cards', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title');// ここにtitleカラムの記述
-            $table->integer('user_id');// ここにuser_idカラムの記述
+            $table->string('title');
+            $table->string('memo');
+            $table->integer('listing_id');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateListingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('listings');
+        Schema::dropIfExists('cards');
     }
 }
